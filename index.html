@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FizzBazz</title>
+</head>
+<body>
+    <h1>Get a FizzBazz Result!</h1>
+    <p style="float: left; margin: 0px; font-weight: bold;">Type a number:</p>
+    <input id="input" type="text"  style="margin-left: 10px;">
+    <button onclick="btn()">Klik</button>
+    <hr />
+    <p id="hasil" style="font-weight: bold;"></p>
+
+   <script>
+        function btn() {
+            let text;
+            let input = document.getElementById("input").value;
+            if (input=="100"){
+                text = "Buzz!";
+            } else if (input =="89") {
+                text = input;
+            }else if (input=="0" || input==""){
+                text = "Waduh invalid bos!";
+            }else if (input%2===0) {
+                text = "Fizz!";
+            }else if (input%2!==0) {
+                text = "FizzBuzz!";
+            }
+            document.getElementById("hasil").innerHTML = text;
+            console.log(input);
+       }
+   </script>
+</body>
+</html>
